@@ -29,5 +29,13 @@ int main(){
 		broj = int(adresa.at(i));
 		ascii.push_back(broj);
 	}   
+    	cout<<"ASCII: "<<endl; //Pecatenje na vektorot
+	cout<<"------------------------------------------------"<<endl;
+	golemina = ascii.size();
+	for(int i = 0; i < golemina; i++){
+		cout<<ascii.at(i)<<" ";
+	}
+	cout<<"\n------------------------------------------------\n"<<endl;
+
 }
     
