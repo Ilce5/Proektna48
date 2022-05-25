@@ -37,5 +37,25 @@ int main(){
 	}
 	cout<<"\n------------------------------------------------\n"<<endl;
 
+	sort(ascii.begin(), ascii.end()); //Sortiranje na vektorot
+
+	cout<<"Sortirana: "<<endl; //Pecatenje na vektorot vo sortirana verzija (od najmal do najgolem)
+	cout<<"------------------------------------------------"<<endl;
+	golemina = ascii.size();
+	for(int i = 0; i < golemina; i++){
+		cout<<ascii.at(i)<<" ";
+	}
+	cout<<"\n------------------------------------------------\n"<<endl;
+
+	cout<<"Vnesete datum: "; //Vnes na datum na raganje vo vektorot
+	for(int i = 0; i < 3; i++){
+		cin>>broj;
+		ascii.push_back(broj);
+	}
+
+	ofstream outFile("INKI869.Proekt3.txt"); //Otvoranje nov file INKI869.Proekt3.txt
+	for (const auto &e : ascii) outFile << e << "\n"; //Pecatenje na vektorot vo file
+
+	cout<<endl;
 }
     
